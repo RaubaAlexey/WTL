@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplicationNew.Models
 {
@@ -10,6 +11,10 @@ namespace WebApplicationNew.Models
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+
+        public DateTime start_time { get; set; }
+
+        public DateTime end_time { get; set; }
     }
 
     public class RegisterModel

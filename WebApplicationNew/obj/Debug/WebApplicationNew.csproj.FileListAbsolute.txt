@@ -109,6 +109,8 @@ C:\Users\Laptop\Documents\WTL\WebApplicationNew\bin\System.Web.WebPages.Deployme
 C:\Users\Laptop\Documents\WTL\WebApplicationNew\bin\System.Web.WebPages.Razor.xml
 C:\Users\Laptop\Documents\WTL\WebApplicationNew\bin\Antlr3.Runtime.pdb
 C:\Users\Laptop\Documents\WTL\WebApplicationNew\bin\Newtonsoft.Json.xml
-C:\Users\Laptop\Documents\WTL\WebApplicationNew\obj\Debug\WebApplicationNew.csprojResolveAssemblyReference.cache
 C:\Users\Laptop\Documents\WTL\WebApplicationNew\obj\Debug\WebApplicationNew.dll
 C:\Users\Laptop\Documents\WTL\WebApplicationNew\obj\Debug\WebApplicationNew.pdb
+C:\Users\Laptop\Documents\WTL\WebApplicationNew\obj\Debug\WebApplicationNew.Migrations.InitialCreate.resources
+C:\Users\Laptop\Documents\WTL\WebApplicationNew\obj\Debug\WebApplicationNew.csproj.GenerateResource.Cache
+C:\Users\Laptop\Documents\WTL\WebApplicationNew\obj\Debug\WebApplicationNew.Migrations.SampleMigrations.resources
