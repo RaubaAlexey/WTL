@@ -8,5 +8,6 @@ namespace WebApplicationNew.Models
         { }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<WTLs> WTLs { get; set; }
     }
 }

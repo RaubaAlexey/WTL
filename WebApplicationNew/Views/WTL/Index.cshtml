@@ -1,8 +1,84 @@
-﻿@model WebApplicationNew.Models.WTL
-
+﻿@model IEnumerable<WebApplicationNew.Models.WTLs>
 @{
     ViewBag.Title = "Index";
 }
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+<h2>WTL</h2>
 
-<h2>Time Now: @Model.EndDate</h2>
+
+<div>
+    <h3>Work time logger table</h3>
+    <table border="1" cellpadding="5">
+        <tr  class="header">
+            <td><p>ID</p></td>
+            <td><p>Name</p></td>
+            <td><p>Monday</p></td>
+            <td><p>Tuesday</p></td>
+            <td><p>Wednesday</p></td>
+            <td><p>Thursday</p></td>
+            <td><p>Friday</p></td>
+            <td><p>Saturday</p></td>
+            <td><p>Sunday</p></td>
+            <td></td>
+        </tr>
+        @foreach (WebApplicationNew.Models.WTLs b in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => b.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => b.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => b.Monday)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => b.Tuesday)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => b.Wednesday)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => b.Thursday)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => b.Friday)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => b.Saturday)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => b.Sunday)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+<div id="myfirstchart" style="height: 250px;">
+    <script>
+        new Morris.Line({
+            element: 'myfirstchart',
+            data: [
+              { day: '01', value: 4 },
+              { day: '02', value: 3 },
+              { day: '03', value: 7 },
+              { day: '04', value: 9 },
+              { day: '05', value: 7 },
+              { day: '06', value: 3 },
+              { day: '07', value: 6 },
+             
+            ],
+            xkey: 'day',
+            ykeys: ['value'],
+            labels: ['Value']   
+        });
+    </script>
+</div>
+
+
 

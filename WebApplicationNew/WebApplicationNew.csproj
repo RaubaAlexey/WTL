@@ -34,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -170,11 +171,27 @@
     <Compile Include="Migrations\201707201358317_SampleMigrations.Designer.cs">
       <DependentUpon>201707201358317_SampleMigrations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707220945553_SampleMigrations1.cs" />
+    <Compile Include="Migrations\201707220945553_SampleMigrations1.Designer.cs">
+      <DependentUpon>201707220945553_SampleMigrations1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707231335518_SampleMigrations2.cs" />
+    <Compile Include="Migrations\201707231335518_SampleMigrations2.Designer.cs">
+      <DependentUpon>201707231335518_SampleMigrations2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707231358280_SampleMigrations3.cs" />
+    <Compile Include="Migrations\201707231358280_SampleMigrations3.Designer.cs">
+      <DependentUpon>201707231358280_SampleMigrations3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707231406071_SampleMigrations4.cs" />
+    <Compile Include="Migrations\201707231406071_SampleMigrations4.Designer.cs">
+      <DependentUpon>201707231406071_SampleMigrations4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Models.cs" />
     <Compile Include="Models\UserContext.cs" />
     <Compile Include="Models\Users.cs" />
-    <Compile Include="Models\WTL.cs" />
+    <Compile Include="Models\WTLs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -236,6 +253,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707201358317_SampleMigrations.resx">
       <DependentUpon>201707201358317_SampleMigrations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707220945553_SampleMigrations1.resx">
+      <DependentUpon>201707220945553_SampleMigrations1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707231335518_SampleMigrations2.resx">
+      <DependentUpon>201707231335518_SampleMigrations2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707231358280_SampleMigrations3.resx">
+      <DependentUpon>201707231358280_SampleMigrations3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707231406071_SampleMigrations4.resx">
+      <DependentUpon>201707231406071_SampleMigrations4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

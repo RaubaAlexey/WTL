@@ -22,11 +22,22 @@ namespace WebApplicationNew.Controllers
             {
                 // поиск пользователя в бд
                 User user = null;
+                WTLs wtl = null;
                 using (UserContext db = new UserContext())
                 {
                     user = db.Users.FirstOrDefault(u => u.Email == model.Name && u.Password == model.Password);
-                    user.start_time = DateTime.Now;
-
+                    wtl = db.WTLs.Add(new WTLs
+                    {
+                        Name = db.Users.FirstOrDefault(u => u.Email == model.Name && u.Password == model.Password).Email.ToString(),
+                        Monday = DateTime.Now,
+                        Tuesday = DateTime.Now,
+                        Wednesday = DateTime.Now,
+                        Thursday = DateTime.Now,
+                        Friday = DateTime.Now,
+                        Saturday = DateTime.Now,
+                        Sunday = DateTime.Now
+                    });
+                    db.SaveChanges();
                 }
                 if (user != null)
                 {
@@ -63,9 +74,9 @@ namespace WebApplicationNew.Controllers
                     // создаем нового пользователя
                     using (UserContext db = new UserContext())
                     {
-                        db.Users.Add(new User { Email = model.Name, Password = model.Password, Age = model.Age, start_time = DateTime.Now,end_time = DateTime.Now });
+                        db.Users.Add(new User { Email = model.Name, Password = model.Password, Age = model.Age, start_time = DateTime.Now});
                         db.SaveChanges();
-
+                        
                         user = db.Users.Where(u => u.Email == model.Name && u.Password == model.Password).FirstOrDefault();
                     }
                     // если пользователь удачно добавлен в бд
@@ -83,7 +94,7 @@ namespace WebApplicationNew.Controllers
 
             return View(model);
         }
-        public ActionResult Logoff()
+        public ActionResult Logoff(LoginModel model)
         {
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");

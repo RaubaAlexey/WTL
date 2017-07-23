@@ -9,6 +9,5 @@ namespace WebApplicationNew.Models
         public string Password { get; set; }
         public int Age { get; set; }
         public DateTime start_time { get; set; }
-        public DateTime end_time { get; set; }
     }
 }
